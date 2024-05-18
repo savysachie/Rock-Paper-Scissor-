@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+h1{
+    background-color: #081b31;
+    color: #fff;
+    height: 5rem;
+    line-height: 5rem;
+}
+.choice{
+    height: 165px;
+    width: 165px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.choice:hover{
+    background-color: #081b31;
+    cursor: pointer;
+}
+img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+.score-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    font-size: 2rem;
+    gap: 5rem;
+}
+#user-score,
+#comp-score{
+    font-size: 4rem;
+}
+.result-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    column-gap: 7rem;
+}
+.result-image img{
+    width: 150px;
+    height: 200px;
+    border-radius: 1px;
+}
+.userresult img{
+    transform: rotate(90deg);
+}
+.compresult img{
+    transform: rotate(-90deg) rotateY(180deg);
+}
+.userresult{
+    transform-origin: left;
+    animation: userShake 0.7s ease infinite;
+}
+@keyframes userShake{
+    50%{
+        transform: rotate(10deg);
+    }
+}
+.compresult{
+    transform-origin: right;
+    animation: cpuShake 0.7s ease infinite;
+}
+@keyframes cpuShake {
+    50%{
+        transform: rotate(-10deg);
+    }
+}
+.msg-container{
+    margin-top: 3rem;
+}
+#msg{
+    background-color: #081b31;
+    color: #fff;
+    font-size: 2rem;
+    display: inline;
+    /*jitna part ho usko highlight krne k liye*/
+    padding: 1rem;
+    border-radius: 1rem;
+}
